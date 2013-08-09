@@ -2,42 +2,67 @@ $yellow: #DBB327;
 $off-white: #F2ECEA;
 $charcoal: #333;
 
-.intro {
+#intro {
 	text-align: center;
 	.welcome {
 		text-transform: uppercase;
-		.welcome-line-1 {
+		#welcome-line-1 {
 			font-weight: 100;
 		}
-		.welcome-line-2 {
+		#welcome-line-2 {
+			margin-top: 10px;
 			font-weight: 900;
 		}
 	}
-	.description {
+	#description {
+		margin-top: 10px;
 		font-weight: 300;
 	}
-	.intro-down {
-		margin-top: 10%;
-		#intro-down {
-			&:hover {
-				color:
-				lighten($charcoal, 10%);
-			}
+}
+
+#mission {
+	text-align: center;
+	p.lead {
+		text-align: center;
+	}
+	h4 {
+		font-weight: 700;
+		text-align: left;
+	}
+	p {
+		font-weight: 300;
+		text-align: left;
+	}
+}
+
+#why {
+	text-align: center;
+	.why-text {
+		margin-top: 15px;
+	}
+}
+
+#proof {
+	text-align: center;
+}
+
+#services {
+	text-align: center;
+}
+
+#go {
+	text-align: center;
+	#go-link {
+		color: $charcoal;
+		&:hover {
+			color:
+			lighten($charcoal, 20%);
+			text-decoration: none;
 		}
 	}
 }
 
-.why {
-	text-align: center;
-	.why-header-1 {
-		font-weight: 700;
-	}
-	.why-header-2 {
-		font-weight: 300;
-	}
-}
-
-.cta {
+#cta {
 	position: fixed;
 	bottom: 80px;
 	right: 30px;
@@ -55,7 +80,7 @@ $charcoal: #333;
 		background-color:
 		lighten($yellow, 10%);
 	}
-	.cta-text {
+	#cta-text {
 		display: table-cell; 
 		vertical-align: middle; 
 		text-align: center;
@@ -64,16 +89,24 @@ $charcoal: #333;
 		&:hover {
 			text-decoration: none;
 			color:
-			lighten($charcoal, 10%);
+			lighten($charcoal, 20%);
 		}
 	}
-	.cta-next {
+	#cta-next {
 		display: none;
 		vertical-align: middle;
 		color:
-		lighten($charcoal, 10%);
+		lighten($charcoal, 20%);
 		&:hover{
 			text-decoration: none;
 		}
+	}
+}
+
+.down {
+	margin-top: 5%;
+	&:hover {
+		color:
+		lighten($charcoal, 20%);
 	}
 }
