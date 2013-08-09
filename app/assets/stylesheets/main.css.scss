@@ -1,0 +1,25 @@
+$off-white: #F2ECEA;
+
+html, body {
+	font-family: 'Roboto', sans-serif;
+	background-color: $off-white;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-size: 4em;
+	font-weight: 700;
+}
+
+p {
+	font-size: 1em;
+	font-weight: 300;
+}
+
+.row {
+	margin-left: 0;
+	margin-right: 0;
+}

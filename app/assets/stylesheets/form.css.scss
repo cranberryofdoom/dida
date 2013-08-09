@@ -1,0 +1,73 @@
+$off-white: #F2ECEA;
+$teal: #324C52;
+$green: #606C26;
+$coral: #D8704A;
+
+.choose-project {
+	.form-selector {
+		display: block;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		margin: auto;
+		-webkit-transition-duration: 0.5s;
+		-webkit-transition-property: all;
+		-webkit-transition-timing-function: ease-in-out;
+		&:hover {
+			text-decoration: none;
+		}
+		.form-label {
+			text-align: center;
+			line-height: 150px;
+			background-color: transparent;
+			color: $off-white;
+		}
+	}
+
+	#form-print-selector {
+		background-color: $teal;
+		&:hover {
+			background-color:
+			lighten($teal, 10%);
+		}
+	}
+
+
+	#form-plaza-selector {
+		background-color: $coral;
+		&:hover {
+			background-color:
+			lighten($coral, 10%);
+		}
+	}
+
+	#form-web-selector {
+		background-color: $green;
+		&:hover {
+			background-color:
+			lighten($green, 10%);
+		}
+	}
+
+	.back {
+		text-align: left;
+		display: none;
+	}
+
+	.next {
+		text-align: right;
+		display: none;
+	}
+}
+
+.back {
+	text-align: left;
+}
+
+.next {
+	text-align: right;
+}
+
+.basic-info {
+	display: none;
+}

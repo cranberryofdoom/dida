@@ -1,0 +1,73 @@
+$yellow: #DBB327;
+$off-white: #F2ECEA;
+$charcoal: #333;
+
+.intro {
+	text-align: center;
+	.welcome {
+		text-transform: uppercase;
+		.welcome-line-1 {
+			font-weight: 100;
+		}
+		.welcome-line-2 {
+			font-weight: 900;
+		}
+	}
+	.description {
+		font-weight: 300;
+	}
+	.intro-down {
+		margin-top: 10%;
+		#intro-down {
+			&:hover {
+				color:
+				lighten($charcoal, 10%);
+			}
+		}
+	}
+}
+
+.why {
+	text-align: center;
+}
+
+.cta {
+	position: fixed;
+	bottom: 80px;
+	right: 30px;
+	text-align: center;
+	display: table; 
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	margin: auto;
+	background-color: $yellow;
+	-webkit-transition-duration: 0.5s;
+	-webkit-transition-property: all;
+	-webkit-transition-timing-function: ease-in-out;
+	&:hover {
+		background-color:
+		lighten($yellow, 10%);
+	}
+	.cta-text {
+		display: table-cell; 
+		vertical-align: middle; 
+		text-align: center;
+		background-color: transparent;
+		color: $charcoal;
+		&:hover {
+			text-decoration: none;
+			color:
+			lighten($charcoal, 10%);
+		}
+	}
+	.cta-next {
+		display: none;
+		vertical-align: middle;
+		color:
+		lighten($charcoal, 10%);
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
