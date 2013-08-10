@@ -58,9 +58,14 @@ $(function(){
 	$('#mission-subhero').css({'height': missionTextHeight});
 	$('#mission-subhero-text').css({'line-height': missionTextHeight + 'px'});
 
-	if( $('.collapse').hasClass('in') ) {
-			$('.mission-bullet').transition({ rotate:'90deg' });
-	};
+	$(".accordion-body").on('show.bs.collapse', 
+		function () {
+			$(this).parent("div").find(".mission-bullet").transition({ rotate:'90deg' }, 200, 'ease');
+		});
+	$(".accordion-body").on('hide.bs.collapse', 
+		function () {
+			$(this).parent("div").find(".mission-bullet").transition({ rotate:'0deg' }, 200, 'ease');
+		});
 
 	$(".down").mouseover(
 		function(){
@@ -129,4 +134,13 @@ $(function(){
 				scrollTop: $("#go").offset().top
 			}, 500);
 		});
+
+	$(window).scroll(function() {
+		if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
+			$("#cta").addClass('animated fadeOutUp');
+		}
+		else {
+			$("#cta").removeClass('fadeOutUp')
+		}
+	});
 });

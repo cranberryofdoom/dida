@@ -75,6 +75,10 @@ $coral: #D8704A;
 					lighten($teal, 10%);
 				}
 			}
+			#mission-line-1 {
+				background-color:
+				lighten($teal, 10%);
+			}
 		}
 		#mission-group-2 {
 			border: 1px solid $coral;
@@ -85,8 +89,12 @@ $coral: #D8704A;
 				-webkit-transition-timing-function: ease-in-out;
 				&:hover {
 					background-color:
-					lighten($coral, 10%);
+					lighten($coral, 5%);
 				}
+			}
+			#mission-line-2 {
+				background-color:
+				lighten($coral, 5%);
 			}
 		}
 		#mission-group-3 {
@@ -101,10 +109,14 @@ $coral: #D8704A;
 					lighten($green, 10%);
 				}
 			}
+			#mission-line-3 {
+				background-color:
+				lighten($green, 10%);
+			}
 		}
 		p {
 			color: $off-white;
-			padding-left: 45px;
+			padding-left: 25px;
 			padding-top: 10px;
 			padding-right: 20px;
 			font-weight: 300;
@@ -129,10 +141,56 @@ $coral: #D8704A;
 	text-align: center;
 	#services-content {
 		text-align: left;
-		h2 {
-			text-align: center;
+		.services-group {
+			color: $off-white;
+			height: 260px;
+			border-radius: 4px;
+			padding: 0;
+			.services-header {
+				border-radius: 4px 4px 0 0;
+			}
+			#services-header-1 {
+				background-color: $teal;
+				padding: 10px;
+			}
+			#services-header-2 {
+				background-color: $coral;
+				padding: 10px;
+			}
+			#services-header-3 {
+				background-color: $green;
+				padding: 10px;
+			}
+			h2 {
+				font-weight: 700;
+				margin: 0 0 10px;
+				text-align: center;
+				color: $off-white;
+			}
+			li {
+				font-size: 12px;
+				font-weight: 300;
+			}
+			p {
+				font-weight: 300;
+			}
 		}
-
+		#services-group-1 {
+			background-color:
+			darken($teal, 10%);
+			margin-right: 5px;
+			margin-left: -5px;
+		}
+		#services-group-2 {
+			background-color:
+			darken($coral, 20%);
+		}
+		#services-group-3 {
+			background-color:
+			darken($green, 10%);
+			margin-right: -5px;
+			margin-left: 5px;
+		}
 	}
 }
 
