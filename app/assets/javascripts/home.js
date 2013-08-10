@@ -8,24 +8,24 @@ $(function(){
 	.css({'padding-top': (($(window).height()/4))+'px'});
 
 	$('#mission')
-	.css({'height': (($(window).height())+20)+'px'})
-	.css({'padding-top': (($(window).height()/6)-20)+'px'});
+	.css({'height': (($(window).height())-25)+'px'})
+	.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 	$('#why')
-	.css({'height': (($(window).height())+20)+'px'})
-	.css({'padding-top': (($(window).height()/6)-20)+'px'});
+	.css({'height': (($(window).height())-25)+'px'})
+	.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 	$('#proof')
-	.css({'height': (($(window).height())+20)+'px'})
-	.css({'padding-top': (($(window).height()/6)-20)+'px'});
+	.css({'height': (($(window).height())-25)+'px'})
+	.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 	$('#services')
-	.css({'height': (($(window).height())+20)+'px'})
-	.css({'padding-top': (($(window).height()/6)-20)+'px'});
+	.css({'height': (($(window).height())-25)+'px'})
+	.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 	$('#go')
-	.css({'height': (($(window).height())+20)+'px'})
-	.css({'padding-top': (($(window).height()/4)-20)+'px'});
+	.css({'height': (($(window).height())-25)+'px'})
+	.css({'padding-top': (($(window).height()/4)-25)+'px'});
 
 	$(window).resize(function(){
 		$('#intro')
@@ -33,25 +33,52 @@ $(function(){
 		.css({'padding-top': ($(window).height()/4)+'px'});
 
 		$('#mission')
-		.css({'height': (($(window).height())+20)+'px'})
-		.css({'padding-top': (($(window).height()/6)-20)+'px'});
+		.css({'height': (($(window).height())-25)+'px'})
+		.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 		$('#why')
-		.css({'height': (($(window).height())+20)+'px'})
-		.css({'padding-top': (($(window).height()/6)-20)+'px'});
+		.css({'height': (($(window).height())-25)+'px'})
+		.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 		$('#proof')
-		.css({'height': (($(window).height())+20)+'px'})
-		.css({'padding-top': (($(window).height()/6)-20)+'px'});
+		.css({'height': (($(window).height())-25)+'px'})
+		.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 		$('#services')
-		.css({'height': (($(window).height())+20)+'px'})
-		.css({'padding-top': (($(window).height()/6)-20)+'px'});
+		.css({'height': (($(window).height())-25)+'px'})
+		.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 		$('#go')
-		.css({'height': (($(window).height())+20)+'px'})
-		.css({'padding-top': (($(window).height()/4)-20)+'px'});
+		.css({'height': (($(window).height())-25)+'px'})
+		.css({'padding-top': (($(window).height()/4)-25)+'px'});
 	});
+
+	var missionTextHeight;
+	missionTextHeight = $("#mission-text").height();
+	$('#mission-subhero').css({'height': missionTextHeight});
+	$('#mission-subhero-text').css({'line-height': missionTextHeight + 'px'});
+
+	if( $('.collapse').hasClass('in') ) {
+			$('.mission-bullet').transition({ rotate:'90deg' });
+	};
+
+	$(".down").mouseover(
+		function(){
+			$(this).transition({ y: 25 }, 500, 'ease');
+		});
+	$(".down").mouseout(
+		function(){
+			$(this).transition({ y: 0 }, 500, 'ease');
+		});
+
+	$("#go-link-wrapper").mouseover(
+		function(){
+			$(this).transition({ x: 25 }, 500, 'ease');
+		});
+	$("#go-link-wrapper").mouseout(
+		function(){
+			$(this).transition({ x: 0 }, 500, 'ease');
+		});
 
 	$("#cta").mouseover(
 		function(){
@@ -72,7 +99,6 @@ $(function(){
 			.hide();
 		});
 
-	var easing, e, pos;
 	$("#intro-down").on("click", 
 		function(){
 			$('html, body').animate({

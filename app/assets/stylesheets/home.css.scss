@@ -1,6 +1,13 @@
 $yellow: #DBB327;
 $off-white: #F2ECEA;
 $charcoal: #333;
+$teal: #324C52;
+$green: #606C26;
+$coral: #D8704A;
+
+.home-header {
+	margin-bottom: 20px;
+}
 
 #intro {
 	text-align: center;
@@ -22,17 +29,89 @@ $charcoal: #333;
 
 #mission {
 	text-align: center;
-	p.lead {
+	h1 {
+		margin-bottom: 70px;
 		text-align: center;
 	}
-	h4 {
-		font-weight: 700;
-		text-align: left;
+	#mission-content {
+		h2 {
+			margin: 0;
+			font-weight: 500;
+			text-align: center;
+			font-size: 38px;
+		}
+		h4 {
+			font-size: 16px;
+			border-radius: 5px;
+			padding: 10px;
+			font-weight: 500;
+			text-align: left;
+			line-height: 1.4em;
+			margin: 0;
+			color: $off-white;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		.accordion-group {
+			border: none;
+			margin-bottom: 5px;
+			.mission-bullet {
+				padding: 0 0 0 20px;
+			}
+			.mission-text {
+				padding: 0 20px 0 0;
+			}
+		}
+		#mission-group-1 {
+			border: 1px solid $teal;
+			background-color: $teal;
+			#mission-header-1 {
+				-webkit-transition-duration: 0.5s;
+				-webkit-transition-property: all;
+				-webkit-transition-timing-function: ease-in-out;
+				&:hover {
+					background-color:
+					lighten($teal, 10%);
+				}
+			}
+		}
+		#mission-group-2 {
+			border: 1px solid $coral;
+			background-color: $coral;
+			#mission-header-2 {
+				-webkit-transition-duration: 0.5s;
+				-webkit-transition-property: all;
+				-webkit-transition-timing-function: ease-in-out;
+				&:hover {
+					background-color:
+					lighten($coral, 10%);
+				}
+			}
+		}
+		#mission-group-3 {
+			border: 1px solid $green;
+			background-color: $green;
+			#mission-header-3 {
+				&:hover {
+					-webkit-transition-duration: 0.5s;
+					-webkit-transition-property: all;
+					-webkit-transition-timing-function: ease-in-out;
+					background-color:
+					lighten($green, 10%);
+				}
+			}
+		}
+		p {
+			color: $off-white;
+			padding-left: 45px;
+			padding-top: 10px;
+			padding-right: 20px;
+			font-weight: 300;
+			text-align: left;
+		}
 	}
-	p {
-		font-weight: 300;
-		text-align: left;
-	}
+
 }
 
 #why {
@@ -48,6 +127,13 @@ $charcoal: #333;
 
 #services {
 	text-align: center;
+	#services-content {
+		text-align: left;
+		h2 {
+			text-align: center;
+		}
+
+	}
 }
 
 #go {
@@ -72,6 +158,7 @@ $charcoal: #333;
 	height: 150px;
 	border-radius: 50%;
 	margin: auto;
+	border: 1px solid $yellow;
 	background-color: $yellow;
 	-webkit-transition-duration: 0.5s;
 	-webkit-transition-property: all;
