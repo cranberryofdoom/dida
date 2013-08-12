@@ -1,4 +1,10 @@
 $(function(){
+	$(window).load(
+		function() {
+			$('#choose-project')
+			.css({'height': (($(window).height()))+'px'})
+			.css({'padding-top': (($(window).height()/4))+'px'});
+		});
 	$('[data-toggle=tooltip]').tooltip();
 	
 	$('.form-selector').mouseover(

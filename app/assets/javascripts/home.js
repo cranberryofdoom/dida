@@ -1,52 +1,39 @@
 $(function(){
-	$("#welcome-line-1").fitText();
-	$("#welcome-line-2").fitText(2, { minFontSize: '17px', maxFontSize: '54px' });
+	$("#welcome-line-1").fitText(1, { minFontSize: '17px', maxFontSize: '111px' });
+	$("#welcome-line-2").fitText(2, { minFontSize: '17px', maxFontSize: '57px' });
 	$("#description").fitText(3, { minFontSize: '6px', maxFontSize: '24px' });
 
-	$('#intro')
-	.css({'height': (($(window).height()))+'px'})
-	.css({'padding-top': (($(window).height()/4))+'px'});
+	$(window).load(
+		function(){
+			$('#intro')
+			.css({'height': (($(window).height()))+'px'})
+			.css({'padding-top': (($(window).height()/4))+'px'});
 
-	$('#mission')
-	.css({'height': (($(window).height())-25)+'px'})
-	.css({'padding-top': (($(window).height()/6)-25)+'px'});
+			$('#why')
+			.css({'height': (($(window).height())-25)+'px'})
+			.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
-	$('#why')
-	.css({'height': (($(window).height())-25)+'px'})
-	.css({'padding-top': (($(window).height()/6)-25)+'px'});
+			$('#services')
+			.css({'height': (($(window).height())-25)+'px'})
+			.css({'padding-top': (($(window).height()/8)-25)+'px'});
 
-	$('#proof')
-	.css({'height': (($(window).height())-25)+'px'})
-	.css({'padding-top': (($(window).height()/6)-25)+'px'});
-
-	$('#services')
-	.css({'height': (($(window).height())-25)+'px'})
-	.css({'padding-top': (($(window).height()/6)-25)+'px'});
-
-	$('#go')
-	.css({'height': (($(window).height())-25)+'px'})
-	.css({'padding-top': (($(window).height()/4)-25)+'px'});
+			$('#go')
+			.css({'height': (($(window).height())-25)+'px'})
+			.css({'padding-top': (($(window).height()/4)-25)+'px'});
+		});
 
 	$(window).resize(function(){
 		$('#intro')
 		.css({'height': ($(window).height())+'px'})
 		.css({'padding-top': ($(window).height()/4)+'px'});
 
-		$('#mission')
-		.css({'height': (($(window).height())-25)+'px'})
-		.css({'padding-top': (($(window).height()/6)-25)+'px'});
-
 		$('#why')
-		.css({'height': (($(window).height())-25)+'px'})
-		.css({'padding-top': (($(window).height()/6)-25)+'px'});
-
-		$('#proof')
 		.css({'height': (($(window).height())-25)+'px'})
 		.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
 		$('#services')
 		.css({'height': (($(window).height())-25)+'px'})
-		.css({'padding-top': (($(window).height()/6)-25)+'px'});
+		.css({'padding-top': (($(window).height()/8)-25)+'px'});
 
 		$('#go')
 		.css({'height': (($(window).height())-25)+'px'})
@@ -60,29 +47,11 @@ $(function(){
 
 	$(".accordion-body").on('show.bs.collapse', 
 		function () {
-			$(this).parent("div").find(".mission-bullet").transition({ rotate:'90deg' }, 200, 'ease');
+			$(this).parent("div").find(".mission-bullet").transition({ rotate:'90deg', x: -10, y: -10 }, 200, 'ease');
 		});
 	$(".accordion-body").on('hide.bs.collapse', 
 		function () {
-			$(this).parent("div").find(".mission-bullet").transition({ rotate:'0deg' }, 200, 'ease');
-		});
-
-	$(".down").mouseover(
-		function(){
-			$(this).transition({ y: 25 }, 500, 'ease');
-		});
-	$(".down").mouseout(
-		function(){
-			$(this).transition({ y: 0 }, 500, 'ease');
-		});
-
-	$("#go-link-wrapper").mouseover(
-		function(){
-			$(this).transition({ x: 25 }, 500, 'ease');
-		});
-	$("#go-link-wrapper").mouseout(
-		function(){
-			$(this).transition({ x: 0 }, 500, 'ease');
+			$(this).parent("div").find(".mission-bullet").transition({ rotate:'0deg', x: 0, y: 0 }, 200, 'ease');
 		});
 
 	$("#cta").mouseover(
@@ -107,22 +76,10 @@ $(function(){
 	$("#intro-down").on("click", 
 		function(){
 			$('html, body').animate({
-				scrollTop: $("#mission").offset().top
-			}, 500);
-		});
-	$("#mission-down").on("click", 
-		function(){
-			$('html, body').animate({
 				scrollTop: $("#why").offset().top
 			}, 500);
 		});
 	$("#why-down").on("click", 
-		function(){
-			$('html, body').animate({
-				scrollTop: $("#proof").offset().top
-			}, 500);
-		});
-	$("#proof-down").on("click", 
 		function(){
 			$('html, body').animate({
 				scrollTop: $("#services").offset().top

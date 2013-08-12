@@ -43,7 +43,7 @@ $coral: #D8704A;
 		h4 {
 			font-size: 16px;
 			border-radius: 5px;
-			padding: 10px;
+			padding: 15px 0;
 			font-weight: 500;
 			text-align: left;
 			line-height: 1.4em;
@@ -57,7 +57,7 @@ $coral: #D8704A;
 			border: none;
 			margin-bottom: 5px;
 			.mission-bullet {
-				padding: 0 0 0 20px;
+				padding: 0 0 0 30px;
 			}
 			.mission-text {
 				padding: 0 20px 0 0;
@@ -142,54 +142,108 @@ $coral: #D8704A;
 	#services-content {
 		text-align: left;
 		.services-group {
-			color: $off-white;
-			height: 260px;
+			color: $charcoal;
 			border-radius: 4px;
-			padding: 0;
-			.services-header {
-				border-radius: 4px 4px 0 0;
+			.services-banner-container {
+				margin: 0 auto;
+				width: 200px;
+				position: relative;
+				.rectangle {
+					height: 60px;
+					position: absolute;
+					z-index: 500;
+					.services-header {
+						-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+						-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+						box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+
+						-webkit-border-radius: 4px;
+						-moz-border-radius: 4px;
+						border-radius: 4px;
+						width: 200px;
+						font-weight: 700;
+						margin: 0 0 10px;
+						text-align: center;
+						color: $off-white;
+						position: absolute;
+						height: 60px;
+					}
+					#services-header-1 {
+						background-color: $teal;
+						padding: 10px;
+					}
+					#services-header-2 {
+
+						background-color: $coral;
+						padding: 10px;
+					}
+					#services-header-3 {
+						background-color: $green;
+						padding: 10px;
+					}
+				}
+				.services-ribbon-top-1 {
+					border-color: darken($teal, 10%) transparent transparent;
+				}
+				.services-ribbon-bottom-1 {
+					border-color: transparent transparent darken($teal, 10%);
+				}
+				.services-ribbon-top-2 {
+					border-color: darken($coral, 20%) transparent transparent;
+				}
+				.services-ribbon-bottom-2 {
+					border-color: transparent transparent darken($coral, 20%);
+				}
+				.services-ribbon-top-3 {
+					border-color: darken($green, 10%) transparent transparent;
+				}
+				.services-ribbon-bottom-3 {
+					border-color: transparent transparent darken($green, 10%);
+				}
+				.l-triangle-top {
+					border-style:solid;
+					border-width:50px;
+					height:0px;
+					width:0px;
+					position: absolute;
+					float: left;
+					top: 2px;
+					left: -40px;
+				}
+				.l-triangle-bottom {
+					border-style:solid;
+					border-width:50px;
+					height:0px;
+					width:0px;
+					position: absolute;
+					float: left;
+					top: -42px;
+					left: -50px;
+				}
+				.r-triangle-top {
+					border-style:solid;
+					border-width:50px;
+					height:0px;
+					width:0px;
+					position: absolute;
+					float: right;
+					top: 2px;
+					right: -40px;
+				}
+				.r-triangle-bottom {
+					border-style:solid;
+					border-width:50px;
+					height:0px;
+					width:0px;
+					position: absolute;
+					float: right;
+					top: -42px;
+					right: -50px;
+				}
 			}
-			#services-header-1 {
-				background-color: $teal;
-				padding: 10px;
+			.services-content {
+				margin-top: 80px;
 			}
-			#services-header-2 {
-				background-color: $coral;
-				padding: 10px;
-			}
-			#services-header-3 {
-				background-color: $green;
-				padding: 10px;
-			}
-			h2 {
-				font-weight: 700;
-				margin: 0 0 10px;
-				text-align: center;
-				color: $off-white;
-			}
-			li {
-				font-size: 12px;
-				font-weight: 300;
-			}
-			p {
-				font-weight: 300;
-			}
-		}
-		#services-group-1 {
-			background-color:
-			darken($teal, 10%);
-			margin-right: 5px;
-			margin-left: -5px;
-		}
-		#services-group-2 {
-			background-color:
-			darken($coral, 20%);
-		}
-		#services-group-3 {
-			background-color:
-			darken($green, 10%);
-			margin-right: -5px;
-			margin-left: 5px;
 		}
 	}
 }
@@ -218,12 +272,15 @@ $coral: #D8704A;
 	margin: auto;
 	border: 1px solid $yellow;
 	background-color: $yellow;
-	-webkit-transition-duration: 0.5s;
-	-webkit-transition-property: all;
-	-webkit-transition-timing-function: ease-in-out;
+	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.55);	
 	&:hover {
 		background-color:
 		lighten($yellow, 10%);
+	}
+	&:active {
+		box-shadow: 0;
 	}
 	#cta-text {
 		display: table-cell; 

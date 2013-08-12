@@ -3,7 +3,11 @@ $teal: #324C52;
 $green: #606C26;
 $coral: #D8704A;
 
-.choose-project {
+#choose-project {
+	text-align: center;
+	h1 {
+		margin-bottom: 50px;
+	}
 	.form-selector {
 		display: block;
 		width: 150px;
@@ -18,7 +22,7 @@ $coral: #D8704A;
 		}
 		.form-label {
 			text-align: center;
-			line-height: 150px;
+			line-height: 100px;
 			background-color: transparent;
 			color: $off-white;
 		}
@@ -26,6 +30,7 @@ $coral: #D8704A;
 
 	#form-print-selector {
 		background-color: $teal;
+		border: 1px solid $teal;
 		&:hover {
 			background-color:
 			lighten($teal, 10%);
@@ -35,6 +40,7 @@ $coral: #D8704A;
 
 	#form-plaza-selector {
 		background-color: $coral;
+		border: 1px solid $coral;
 		&:hover {
 			background-color:
 			lighten($coral, 10%);
@@ -43,6 +49,7 @@ $coral: #D8704A;
 
 	#form-web-selector {
 		background-color: $green;
+		border: 1px solid $green;
 		&:hover {
 			background-color:
 			lighten($green, 10%);
@@ -50,22 +57,38 @@ $coral: #D8704A;
 	}
 
 	.back {
+		margin-top: 50px;
 		text-align: left;
 		display: none;
+		#back-arrow {
+			margin-right: 10px;
+		}
 	}
 
 	.next {
+		margin-top: 50px;
 		text-align: right;
 		display: none;
+		#next-arrow {
+			margin-left: 10px;
+		}
 	}
 }
 
 .back {
 	text-align: left;
+	h3 {
+		margin: 0;
+		font-weight: 700;
+	}
 }
 
 .next {
 	text-align: right;
+	h3 {
+		margin: 0;
+		font-weight: 700;
+	}
 }
 
 .basic-info {
