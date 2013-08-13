@@ -2,11 +2,17 @@ $yellow: #DBB327;
 $charcoal: #333;
 $off-white: #F2ECEA;
 
-.navbar {
+.navbar-inverse {
 	background-color: $charcoal;
-	li {
-		a {
-			color: $off-white;
+	.navbar-nav {
+		li {
+			a {
+				color: $off-white;
+				&:hover {
+					color: $yellow;
+				}
+			}
 		}
+
 	}
 }

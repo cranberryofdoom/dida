@@ -1,6 +1,7 @@
 Dida::Application.routes.draw do
 
   root :to => 'home#index'
+  get '/index' => 'home#index'
   get '/form' => 'form#new'
   get '/form#new' => 'form#new'
   # The priority is based upon order of creation: first created -> highest priority.

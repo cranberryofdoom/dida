@@ -22,23 +22,24 @@ $(function(){
 			.css({'padding-top': (($(window).height()/4)-25)+'px'});
 		});
 
-	$(window).resize(function(){
-		$('#intro')
-		.css({'height': ($(window).height())+'px'})
-		.css({'padding-top': ($(window).height()/4)+'px'});
+	$(window).resize(
+		function(){
+			$('#intro')
+			.css({'height': ($(window).height())+'px'})
+			.css({'padding-top': ($(window).height()/4)+'px'});
 
-		$('#why')
-		.css({'height': (($(window).height())-25)+'px'})
-		.css({'padding-top': (($(window).height()/6)-25)+'px'});
+			$('#why')
+			.css({'height': (($(window).height())-25)+'px'})
+			.css({'padding-top': (($(window).height()/6)-25)+'px'});
 
-		$('#services')
-		.css({'height': (($(window).height())-25)+'px'})
-		.css({'padding-top': (($(window).height()/8)-25)+'px'});
+			$('#services')
+			.css({'height': (($(window).height())-25)+'px'})
+			.css({'padding-top': (($(window).height()/8)-25)+'px'});
 
-		$('#go')
-		.css({'height': (($(window).height())-25)+'px'})
-		.css({'padding-top': (($(window).height()/4)-25)+'px'});
-	});
+			$('#go')
+			.css({'height': (($(window).height())-25)+'px'})
+			.css({'padding-top': (($(window).height()/4)-25)+'px'});
+		});
 
 	var missionTextHeight;
 	missionTextHeight = $("#mission-text").height();

@@ -14,6 +14,9 @@ $coral: #D8704A;
 		height: 150px;
 		border-radius: 50%;
 		margin: auto;
+		-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+		-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+		box-shadow: 1px 1px 4px rgba(0,0,0,0.55);	
 		-webkit-transition-duration: 0.5s;
 		-webkit-transition-property: all;
 		-webkit-transition-timing-function: ease-in-out;
@@ -57,40 +60,65 @@ $coral: #D8704A;
 	}
 
 	.back {
-		margin-top: 50px;
-		text-align: left;
 		display: none;
-		#back-arrow {
-			margin-right: 10px;
-		}
-	}
 
-	.next {
-		margin-top: 50px;
-		text-align: right;
-		display: none;
-		#next-arrow {
-			margin-left: 10px;
-		}
 	}
+	.next {
+		display: none;
+	}
+}
+
+.form-header {
+	margin-bottom: 50px;
+	text-align: center;
 }
 
 .back {
 	text-align: left;
+	margin-top: 50px;
+	.back-arrow {
+		margin-right: 10px;
+	}
 	h3 {
 		margin: 0;
 		font-weight: 700;
 	}
 }
+
 
 .next {
 	text-align: right;
+	margin-top: 50px;
+	.next-arrow {
+		margin-left: 10px;
+	}
 	h3 {
 		margin: 0;
 		font-weight: 700;
 	}
 }
 
-.basic-info {
-	display: none;
+.submit {
+	text-align: right;
+	margin-top: 50px;
+	.submit-arrow {
+		margin-left: 10px;
+	}
+}
+
+#basic-info {
+}
+
+#project-medium {
+	.icheckbox_flat-yellow {
+		position: absolute;
+		left: 0px;
+	}
+}
+
+#project-details {
+}
+
+#project-logistics {
+
 }
