@@ -307,6 +307,7 @@ $coral: #D8704A;
 
 .down {
 	margin-top: 5%;
+	cursor: pointer;
 	&:hover {
 		color:
 		lighten($charcoal, 20%);

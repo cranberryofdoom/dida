@@ -1,9 +1,9 @@
 <div class="col-12">
-	<form class="form-horizontal" data-validate="parsley">
+	<form class="form-horizontal" data-validate="parsley" id="basic-form">
 		<div class="form-group">
 			<label for="input-first-name" class="col-lg-3 control-label">First Name</label>
 			<div class="col-lg-8">
-				<input type="text" class="form-control" id="input-first-name" placeholder="Trolly" >
+				<input type="text" class="form-control" id="input-first-name" placeholder="Trolly" data-required="true">
 			</div>
 		</div>
 		<div class="form-group">
@@ -24,14 +24,20 @@
 				<input type="text" class="form-control" id="input-organization" placeholder="Duke Trolls" data-required="true">
 			</div>
 		</div>
+		<div class="form-group" id="plaza-fundcode">
+			<label for="input-fundcode" class="col-lg-3 control-label">Fund Code</label>
+			<div class="col-lg-8">
+				<input type="text" class="form-control" id="input-fundcode" placeholder="Duke Trolls">
+			</div>
+		</div>
 		<div class="form-group">
 			<label for="input-cell" class="col-lg-3 control-label">Cell Phone Number</label>
 			<div class="col-lg-8">
-				<input type="text" class="form-control" id="input-cell" placeholder="(800) 77T-ROLL" data-required="true">
+				<input type="tel" class="form-control" id="input-cell" placeholder="(800) 77T-ROLL" data-required="true">
 			</div>
 		</div>
 	</form>
 </div>
-<div class="col-6 col-lg-6 pull-right next">
-	<h3>Next<i class="icon-double-angle-down next-arrow" id="basic-next"></i></h3>
+<div class="col-6 col-lg-6 pull-right next" id="basic-info-next">
+	<h3>Next<i class="icon-double-angle-down next-arrow"></i></h3>
 </div>

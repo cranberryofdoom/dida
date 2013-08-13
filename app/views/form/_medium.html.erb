@@ -1,43 +1,43 @@
 <div class="col-12">
-	<form class="form-horizontal col-4">
+	<form class="form-horizontal" data-validate="parsley" id="medium-form">
+		<div class="col-4">
 		<div class="checkbox">
-			<label><input type="checkbox">Poster</label>
+			<label><input type="checkbox" data-mincheck="1" data-group="print-check">Poster</label>
 		</div>
 		<div class="checkbox">
-			<label><input type="checkbox">Flyer</label>
+			<label><input type="checkbox" data-group="print-check">Flyer</label>
 		</div>
 		<div class="checkbox">
-			<label><input type="checkbox">Leaflet</label>
+			<label><input type="checkbox" data-group="print-check">Leaflet</label>
 		</div>
-	</form>
-	<form class="form-horizontal col-4">
+	</div>
+	<div class="col-4">
 		<div class="checkbox">
-			<label><input type="checkbox">Banner</label>
-		</div>
-		<div class="checkbox">
-			<label><input type="checkbox">The Chronicle Ad</label>
+			<label><input type="checkbox" data-group="print-check">Banner</label>
 		</div>
 		<div class="checkbox">
-			<label><input type="checkbox">Dining Hall Table Tents</label>
-		</div>
-	</form>
-	<form class="form-horizontal col-4">
-		<div class="checkbox">
-			<label><input type="checkbox">Bus Ad</label>
+			<label><input type="checkbox" data-group="print-check">The Chronicle Ad</label>
 		</div>
 		<div class="checkbox">
-			<label><input type="checkbox">T-Shirt</label>
+			<label><input type="checkbox" data-group="print-check">Dining Hall Table Tents</label>
 		</div>
 		<div class="checkbox">
-			<label><input type="checkbox">Logo</label>
+			<label><input type="checkbox" data-group="print-check">Other</label>
 		</div>
-	</form>
-	<form class="form-horizontal col-12">
+	</div>
+	<div class="col-4">
 		<div class="checkbox">
-			<label><input type="checkbox">Other</label>
+			<label><input type="checkbox" data-group="print-check">Bus Ad</label>
 		</div>
+		<div class="checkbox">
+			<label><input type="checkbox" data-group="print-check">T-Shirt</label>
+		</div>
+		<div class="checkbox">
+			<label><input type="checkbox" data-group="print-check">Logo</label>
+		</div>
+	</div>
 	</form>
 </div>
-<div class="col-6 col-lg-6 pull-right next">
-	<h3>Next<i class="icon-double-angle-down next-arrow" id="medium-next"></i></h3>
+<div class="col-6 col-lg-6 pull-right next" id="project-medium-next">
+	<h3>Next<i class="icon-double-angle-down next-arrow"></i></h3>
 </div>
