@@ -98,7 +98,7 @@ $(function(){
 			$("#cta").addClass('animated fadeOutUp');
 		}
 		else {
-			$("#cta").removeClass('fadeOutUp')
+			$("#cta").removeClass('fadeOutUp');
 		}
 	});
 });
