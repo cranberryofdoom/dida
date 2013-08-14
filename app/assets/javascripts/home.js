@@ -57,9 +57,7 @@ $(function(){
 
 	$("#cta").mouseover(
 		function(){
-			$("#cta-text")
-			.addClass('animated fadeOutRight')
-			.hide();
+			$("#cta-text").hide();
 			$("#cta-next")
 			.show()
 			.css({'display': 'table-cell'})
@@ -67,9 +65,7 @@ $(function(){
 		});
 	$("#cta").mouseout(
 		function(){
-			$("#cta-text")
-			.removeClass('animated fadeOutRight')
-			.show();
+			$("#cta-text").show();
 			$("#cta-next")
 			.hide();
 		});

@@ -15,5 +15,4 @@
 //= require bootstrap.js
 //= require jquery.fittext.js
 //= require jquery.transit.js
-//= require turbolinks
 //= require_tree .
