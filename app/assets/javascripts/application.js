@@ -15,4 +15,6 @@
 //= require bootstrap.js
 //= require jquery.fittext.js
 //= require jquery.transit.js
+//= require parse.js
+//= require parse.init.js
 //= require_tree .
