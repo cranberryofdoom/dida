@@ -15,7 +15,7 @@ $red: #D0583A;
 		font-weight: 700;
 	}
 	h4 {
-		font-weight: 900;
+		font-weight: 700;
 	}
 	.join-cta {
 		margin-top: 40px;
@@ -39,6 +39,9 @@ $red: #D0583A;
 				box-shadow: 0;
 			}
 			#join-cta-text {
+				h3 {
+					line-height: 38px;
+				}
 				display: table-cell; 
 				vertical-align: middle; 
 				text-align: center;
