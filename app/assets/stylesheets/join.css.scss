@@ -1,0 +1,107 @@
+$yellow: #F1C40F;
+$off-white: #F2ECEA;
+$charcoal: #333;
+$teal: #69AEBD;
+$green: #D0583A;
+$red: #D0583A;
+
+#join {
+	padding-top: 50px;
+	padding-bottom: 100px;
+	h2 {
+		font-weight: 300;
+	}
+	h3 {
+		font-weight: 700;
+	}
+	h4 {
+		font-weight: 900;
+	}
+	.join-cta {
+		margin-top: 40px;
+		#join-cta {
+			height: 150px;
+			width: 150px;
+			border-radius: 50%;
+			margin: auto;
+			display: table; 
+			background-color: $yellow;
+			border: 1px solid $yellow;
+			background-color: $yellow;
+			-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+			-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+			box-shadow: 1px 1px 4px rgba(0,0,0,0.55);	
+			&:hover {
+				background-color:
+				lighten($yellow, 10%);
+			}
+			&:active {
+				box-shadow: 0;
+			}
+			#join-cta-text {
+				display: table-cell; 
+				vertical-align: middle; 
+				text-align: center;
+				background-color: transparent;
+				color: $charcoal;
+				&:hover {
+					text-decoration: none;
+					color:
+					lighten($charcoal, 20%);
+				}
+			}
+		}
+	}
+	.join-positions {
+		margin-top: 40px;
+		.join-description {
+			margin-top: 70px;
+		}
+		.banner-container {
+			margin: 0 auto;
+			width: 300px;
+			position: relative;
+			.rectangle {
+				height: 50px;
+				position: absolute;
+				z-index: 500;
+				.join-header {
+					-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+					-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+					box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+
+					-webkit-border-radius: 4px;
+					-moz-border-radius: 4px;
+					border-radius: 4px;
+					width: 300px;
+					font-weight: 700;
+					margin: 0 0 10px;
+					text-align: center;
+					color: $off-white;
+					position: absolute;
+					height: 50px;
+				}
+				#join-header-1 {
+					background-color: $teal;
+					padding: 10px;
+				}
+				#join-header-2 {
+					background-color: $red;
+					padding: 10px;
+				}
+			}
+			.ribbon-top-1 {
+				border-color: darken($teal, 10%) transparent transparent;
+			}
+			.ribbon-bottom-1 {
+				border-color: transparent transparent darken($teal, 10%);
+			}
+			.ribbon-top-2 {
+				border-color: darken($red, 20%) transparent transparent;
+			}
+			.ribbon-bottom-2 {
+				border-color: transparent transparent darken($red, 20%);
+			}
+		}
+	}
+}

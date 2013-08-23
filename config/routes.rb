@@ -4,6 +4,10 @@ Dida::Application.routes.draw do
   get '/index' => 'home#index'
   get '/form' => 'form#new'
   get '/form#new' => 'form#new'
+  get '/about' => 'navbar#about'
+  get '/team' => 'navbar#team'
+  get '/portfolio' => 'navbar#portfolio'
+  get '/join' => 'navbar#join'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

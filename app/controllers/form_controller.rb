@@ -1,5 +1,5 @@
 class FormController < ApplicationController
   def new
-    render 'new'
+  	render 'new'
   end
 end

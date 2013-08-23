@@ -282,16 +282,52 @@ $("#project-medium-next").click(
 $("#form-submit").click(
 	function(){
 		$('#basic-form').parsley('validate');
-		$('#medium-form').parsley('validate');
 		$('#details-form').parsley('validate');
-		if ($('#project-medium').is(":visible")){
-			if ($('#medium-form').parsley('isValid') && $('#basic-form').parsley('isValid') && $('#details-form').parsley('isValid')) {
-				$("#form-new").hide();
-				$("#form-success").show();
+		if ($('#basic-form').parsley('isValid') && $('#details-form').parsley('isValid')) {
+			var request = new Parse.Object("Request");
+			var first = $('#input-first-name').val();
+			var last = $('#input-last-name').val();
+			var email = $('#inputEmail').val();
+			var orgName = $('#input-organization').val();
+			var fund = $('#input-fundcode').val();
+			var cell = $('#input-cell').val();
+			var orgDescribe = $('#input-org-description').val();
+			var projectDirection = $('#input-project-direction').val();
+			var projectDetails = $('#input-project-details').val();
+			var fileUpload = $("#input-file-upload")[0];
+			if (fileUpload.files.length > 0) {
+				var file = fileUpload.files[0];
+				var name = "reference.jpg";
+				var parseFile = new Parse.File(name, file);
+				parseFile.save().then(function() {
+					request.set("projectFiles", file);
+				}, function(error) {
+				});
 			}
-		}
-		else {
-			if ($('#basic-form').parsley('isValid') && $('#details-form').parsley('isValid')) {
+			var dueDate = $('#input-due-date').val();
+			request.set("firstName", first);
+			request.set("lastName", last);
+			request.set("eMail", email);
+			request.set("orgName", orgName);
+			request.set("fundCode", fund);
+			request.set("cellNumber", cell);
+			request.set("orgDescription", orgDescribe);
+			request.set("projectDetails", projectDetails);
+			request.set("projectDirection", projectDirection);
+			if ($('#project-medium').is(":visible")){
+				$('#medium-form').parsley('validate');
+				if ($('#medium-form'.parsley('isValid'))){
+					var medium = [];
+					$(':checkbox:checked').each(function(i){
+						medium[i] = $(this).val();
+					});
+					request.set("printMedium", medium);
+					request.save();
+					$("#form-new").hide();
+					$("#form-success").show();
+				} 
+			} else {
+				request.save();
 				$("#form-new").hide();
 				$("#form-success").show();
 			}
