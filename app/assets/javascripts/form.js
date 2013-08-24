@@ -45,29 +45,18 @@ $(function(){
 		function() {
 			if($(window).scrollTop() <= 0) {
 				$("#progress-print").addClass('animated fadeOutDown');
-				$("#progress-plaza").addClass('animated fadeOutDown');
 				$("#progress-web").addClass('animated fadeOutDown');
 			}
 			else {
 				if($('#form-print-selector').hasClass('active')){
 					$('#progress-bar').show();
-					$("#progress-plaza").hide();
 					$("#progress-web").hide();
 					$("#progress-print")
 					.show()
 					.removeClass('fadeOutDown');
 				}
-				if($('#form-plaza-selector').hasClass('active')){
-					$('#progress-bar').show();
-					$("#progress-print").hide();
-					$("#progress-web").hide();
-					$("#progress-plaza")
-					.show()
-					.removeClass('fadeOutDown');
-				}
 				if($('#form-web-selector').hasClass('active')){
 					$('#progress-bar').show();
-					$("#progress-plaza").hide();
 					$("#progress-print").hide();
 					$("#progress-web")
 					.show()
@@ -133,30 +122,9 @@ $(function(){
 			.addClass('animated bounceInUp');
 			$('#choose-project-back').show()
 			.addClass('animated bounceInUp');			
-			$('#form-plaza-container').hide();
 			$('#form-web-container').hide();
 			$('#basic-info').show();
 			$('#plaza-fundcode').hide();
-		});
-	$('#form-plaza-selector').click(
-		function(){
-			$('#basic-form').parsley('addItem', '#input-fundcode');
-			$(this).addClass('active');
-			$(this).next().hide();
-			$('#choose-project-header').text("You have chosen");
-			$('#form-plaza-container')
-			.removeClass('col-lg-4 col-sm-4')
-			.addClass('animated bounce col-lg-12 col-sm-12');
-			$('#choose-project-next')
-			.show()
-			.addClass('animated bounceInUp');
-			$('#choose-project-back')
-			.show()
-			.addClass('animated bounceInUp');			
-			$('#form-print-container').hide();
-			$('#form-web-container').hide();
-			$('#basic-info').show();
-			$('#plaza-fundcode').show();
 		});
 	$('#form-web-selector').click(
 		function(){
@@ -173,7 +141,6 @@ $(function(){
 			$('#choose-project-back')
 			.show()
 			.addClass('animated bounceInUp');			
-			$('#form-plaza-container').hide();
 			$('#form-print-container').hide();
 			$('#basic-info').show();
 			$('#plaza-fundcode').hide();
@@ -194,35 +161,18 @@ $(function(){
 			$("#basic-info").hide();
 			$("#project-medium").hide();
 			$("#project-details").hide();
-			if ($('#form-print-selector').is(":visible") && $('#form-plaza-selector').is(":hidden") && $('#form-web-selector').is(":hidden")){
+			if ($('#form-print-selector').is(":visible") && $('#form-web-selector').is(":hidden")){
 				$('#form-print-container')
 				.removeClass('animated bounceInLeft col-lg-12 col-sm-12')
 				.addClass('col-lg-4 col-sm-4');
-				$('#form-plaza-container').show(10, function() {
-					$(this).addClass('animated bounceInRight');
-				});
 				$('#form-web-container').show(10, function() {
 					$(this).addClass('animated bounceInRight');
 				});
 			}
-			if ($('#form-plaza-selector').is(":visible")  && $('#form-print-selector').is(":hidden") && $('#form-web-selector').is(":hidden")){
-				$('#form-plaza-container')
-				.removeClass('animated bounceInLeft col-lg-12 col-sm-12')
-				.addClass('col-lg-4 col-sm-4');
-				$('#form-print-container').show(10, function() {
-					$(this).addClass('animated bounceInLeft');
-				});
-				$('#form-web-container').show(10, function() {
-					$(this).addClass('animated bounceInRight');
-				});
-			}
-			if ($('#form-web-selector').is(":visible")  && $('#form-print-selector').is(":hidden") && $('#form-plaza-selector').is(":hidden")){
+			if ($('#form-web-selector').is(":visible")  && $('#form-print-selector').is(":hidden")){
 				$('#form-web-container')
 				.removeClass('animated bounceInLeft col-lg-12 col-sm-12')
 				.addClass('col-lg-4 col-sm-4');
-				$('#form-plaza-container').show(10, function() {
-					$(this).addClass('animated bounceInLeft');
-				});
 				$('#form-print-container').show(10, function() {
 					$(this).addClass('animated bounceInLeft');
 				});
@@ -246,26 +196,14 @@ $('#basic-info-next').click(
 				}, 500);
 			}
 		} else {
-			if ($('#form-plaza-container').is(':visible')) {
-				if ($('#basic-form').parsley('isValid')) {
-					$('#label-project-direction').text("How do you want your ad board to look?");
-					$('#label-project-details').text("What do you want your ad board to say?");
-					$('#logistics-agreement').text("I understand DiDA has a 2 week (10 business day) minimum turnaround for Plaza Board requests.");
-					$('#project-details').show();
-					$('html, body').animate({
-						scrollTop: $("#project-details").offset().top
-					}, 500);
-				}
-			} else {
-				if ($('#basic-form').parsley('isValid')) {
-					$('#label-project-direction').text("Describe how you want your website or webpage to look and the functionalities you would like implemented.");
-					$('#label-project-details').text("Tell us about the exact text, colors and images you want your website to have.");
-					$('#logistics-agreement').text("I understand DiDA has a 2 week (10 business day) minimum turnaround for slight design alterations and a 4 week (20 business day) minimum turnaround for full Web requests.");
-					$('#project-details').show();
-					$('html, body').animate({
-						scrollTop: $("#project-details").offset().top
-					}, 500);
-				}
+			if ($('#basic-form').parsley('isValid')) {
+				$('#label-project-direction').text("Describe how you want your website or webpage to look and the functionalities you would like implemented.");
+				$('#label-project-details').text("Tell us about the exact text, colors and images you want your website to have.");
+				$('#logistics-agreement').text("I understand DiDA has a 2 week (10 business day) minimum turnaround for slight design alterations and a 4 week (20 business day) minimum turnaround for full Web requests.");
+				$('#project-details').show();
+				$('html, body').animate({
+					scrollTop: $("#project-details").offset().top
+				}, 500);
 			}
 		}
 	});

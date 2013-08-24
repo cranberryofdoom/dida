@@ -55,21 +55,6 @@ $(function(){
 			$(this).parent("div").find(".mission-bullet").transition({ rotate:'0deg', x: 0, y: 0 }, 200, 'ease');
 		});
 
-	$("#cta").mouseover(
-		function(){
-			$("#cta-text").hide();
-			$("#cta-next")
-			.show()
-			.css({'display': 'table-cell'})
-			.addClass('animated fadeInLeft');
-		});
-	$("#cta").mouseout(
-		function(){
-			$("#cta-text").show();
-			$("#cta-next")
-			.hide();
-		});
-
 	$("#intro-down").on("click", 
 		function(){
 			$('html, body').animate({

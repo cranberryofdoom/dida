@@ -8,6 +8,7 @@ Dida::Application.routes.draw do
   get '/team' => 'navbar#team'
   get '/portfolio' => 'navbar#portfolio'
   get '/join' => 'navbar#join'
+  get '/policies' => 'navbar#policies'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

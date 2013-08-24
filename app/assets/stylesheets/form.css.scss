@@ -1,9 +1,9 @@
+$yellow: #F1C40F;
 $off-white: #F2ECEA;
 $charcoal: #333;
-$teal: #324C52;
-$green: #606C26;
-$coral: #D8704A;
-$yellow: #DBB327;
+$teal: #69AEBD;
+$green: #D0583A;
+$red: #D0583A;
 
 #progress-bar {
 	display: none;
@@ -21,11 +21,11 @@ $yellow: #DBB327;
 		.teal-3 {
 			background-color: darken($teal, 20%);
 		}
-		.coral-1 {
-			background-color: $coral;
+		.red-1 {
+			background-color: $red;
 		}
-		.coral-2 {
-			background-color: darken($coral, 20%);
+		.red-2 {
+			background-color: darken($red, 20%);
 		}
 		.green-1 {
 			background-color: $green;
@@ -101,11 +101,11 @@ $yellow: #DBB327;
 
 
 	#form-plaza-selector {
-		background-color: $coral;
-		border: 1px solid $coral;
+		background-color: $red;
+		border: 1px solid $red;
 		&:hover {
 			background-color:
-			lighten($coral, 10%);
+			lighten($red, 10%);
 		}
 	}
 
@@ -124,7 +124,7 @@ $yellow: #DBB327;
 		height: 165px
 	}
 	.plaza-active {
-		background-color: lighten($coral, 10%);
+		background-color: lighten($red, 10%);
 		width: 165px;
 		height: 165px
 	}
