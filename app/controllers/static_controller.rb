@@ -1,4 +1,4 @@
-class NavbarController < ApplicationController
+class StaticController < ApplicationController
 	def about
 		render 'about'
 	end

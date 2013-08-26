@@ -4,7 +4,6 @@ $(function(){
 			$('input').iCheck({
 				checkboxClass: 'icheckbox_flat-yellow',
 				radioClass: 'iradio_flat-yellow'});
-			$('form-success').hide();
 			$('#choose-project')
 			.css({'height': (($(window).height()))+'px'})
 			.css({'padding-top': (($(window).height()/4))+'px'});
@@ -88,8 +87,6 @@ $(function(){
 
 	$('.form-selector').hover(
 		function(){ 
-			$('#form-plaza-container')
-			.removeClass('animated bounceInLeft bounceInRight');
 			$('#form-print-container').removeClass('animated bounceInLeft');
 			$('#form-web-container').removeClass('animated bounceInRight');
 			$(this).addClass('animated pulse');
@@ -124,7 +121,7 @@ $(function(){
 			.addClass('animated bounceInUp');			
 			$('#form-web-container').hide();
 			$('#basic-info').show();
-			$('#plaza-fundcode').hide();
+			window.requestkind = "print";			
 		});
 	$('#form-web-selector').click(
 		function(){
@@ -143,7 +140,7 @@ $(function(){
 			.addClass('animated bounceInUp');			
 			$('#form-print-container').hide();
 			$('#basic-info').show();
-			$('#plaza-fundcode').hide();
+			window.requestkind = "web";
 		});
 	$('#choose-project-back').click(
 		function(){
@@ -153,9 +150,6 @@ $(function(){
 			.removeClass('animated bounceInUp');
 			$('#choose-project-back').hide()
 			.removeClass('animated bounceInUp');
-			$('#form-plaza-container')
-			.removeClass('bounceInLeft')
-			.removeClass('bounceInRight');
 			$('#form-print-container').removeClass('bounceInLeft');
 			$('#form-web-container').removeClass('bounceInRight');
 			$("#basic-info").hide();
@@ -222,53 +216,15 @@ $("#form-submit").click(
 		$('#basic-form').parsley('validate');
 		$('#details-form').parsley('validate');
 		if ($('#basic-form').parsley('isValid') && $('#details-form').parsley('isValid')) {
-			var request = new Parse.Object("Request");
-			var first = $('#input-first-name').val();
-			var last = $('#input-last-name').val();
-			var email = $('#inputEmail').val();
-			var orgName = $('#input-organization').val();
-			var fund = $('#input-fundcode').val();
-			var cell = $('#input-cell').val();
-			var orgDescribe = $('#input-org-description').val();
-			var projectDirection = $('#input-project-direction').val();
-			var projectDetails = $('#input-project-details').val();
-			var fileUpload = $("#input-file-upload")[0];
-			if (fileUpload.files.length > 0) {
-				var file = fileUpload.files[0];
-				var name = "reference.jpg";
-				var parseFile = new Parse.File(name, file);
-				parseFile.save().then(function() {
-					request.set("projectFiles", file);
-				}, function(error) {
-				});
-			}
-			var dueDate = $('#input-due-date').val();
-			request.set("firstName", first);
-			request.set("lastName", last);
-			request.set("eMail", email);
-			request.set("orgName", orgName);
-			request.set("fundCode", fund);
-			request.set("cellNumber", cell);
-			request.set("orgDescription", orgDescribe);
-			request.set("projectDetails", projectDetails);
-			request.set("projectDirection", projectDirection);
-			if ($('#project-medium').is(":visible")){
-				$('#medium-form').parsley('validate');
-				if ($('#medium-form'.parsley('isValid'))){
-					var medium = [];
-					$(':checkbox:checked').each(function(i){
-						medium[i] = $(this).val();
-					});
-					request.set("printMedium", medium);
-					request.save();
-					$("#form-new").hide();
-					$("#form-success").show();
-				} 
-			} else {
-				request.save();
-				$("#form-new").hide();
-				$("#form-success").show();
-			}
+			var formData = {}
+			formData.kind = window.requestkind;
+			formData.basic = $('#basic-form').serializeArray()
+			formData.medium = $('#medium-form').serializeArray()
+			formData.details = $('#details-form').serializeArray()
+			console.log(formData);
+			$.post("/request/submit", formData, function(data) {
+				window.location = "/success"
+			})
 		}
 	});
 });

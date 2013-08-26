@@ -37,7 +37,12 @@ group :doc do
 end
 
 group :production do
-  gem 'rails_12factor', '0.0.2'
+	gem 'rails_12factor', '0.0.2'
+end
+
+group :development do
+	gem "better_errors"
+	gem "binding_of_caller"
 end
 
 # Use ActiveModel has_secure_password

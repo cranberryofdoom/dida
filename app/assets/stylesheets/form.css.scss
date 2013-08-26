@@ -80,6 +80,7 @@ $red: #D0583A;
 		-webkit-transition-property: all;
 		-webkit-transition-timing-function: ease-in-out;
 		&:hover {
+			cursor: pointer;
 			text-decoration: none;
 		}
 		.form-label {
