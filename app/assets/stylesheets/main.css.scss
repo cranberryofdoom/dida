@@ -34,6 +34,14 @@ p.lead {
 	font-weight: 300;
 }
 
+
+.static-header {
+}
+
+.static-content {
+	padding: 0 50px;
+}
+
 .row {
 	margin-left: 0;
 	margin-right: 0;
@@ -43,6 +51,7 @@ p.lead {
 }
 
 hr {
+	margin: 10px 0;
 	border-top: 5px solid $charcoal;
 }
 

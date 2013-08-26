@@ -121,7 +121,7 @@ $(function(){
 			.addClass('animated bounceInUp');			
 			$('#form-web-container').hide();
 			$('#basic-info').show();
-			window.requestkind = "print";			
+			window.requestkind = "Print";			
 		});
 	$('#form-web-selector').click(
 		function(){
@@ -140,7 +140,7 @@ $(function(){
 			.addClass('animated bounceInUp');			
 			$('#form-print-container').hide();
 			$('#basic-info').show();
-			window.requestkind = "web";
+			window.requestkind = "Web";
 		});
 	$('#choose-project-back').click(
 		function(){

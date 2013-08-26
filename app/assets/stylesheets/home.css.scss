@@ -101,6 +101,13 @@ $coral: #D0583A;
 
 #go {
 	text-align: center;
+	#subheader {
+		font-weight: 300;
+		font-size: 23px;
+	}
+	#date {
+		font-size: 44px;
+	}
 	#go-link {
 		color: $charcoal;
 		&:hover {
