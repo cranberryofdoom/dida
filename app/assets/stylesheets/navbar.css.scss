@@ -4,6 +4,13 @@ $off-white: #F2ECEA;
 
 .navbar-inverse {
 	background-color: $charcoal;
+	a {
+		color: #999999;
+		&:hover {
+			text-decoration: none;
+			color: $yellow;
+		}
+	}
 	.navbar-nav {
 		li {
 			color: $off-white;

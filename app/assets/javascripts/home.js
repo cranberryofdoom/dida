@@ -75,6 +75,12 @@ $(function(){
 		});
 
 	$(window).scroll(function() {
+		if($(window).scrollTop() + $(window).height() > $(window).height()) {
+			$("#announcements").addClass('animated fadeOutLeft');
+		}
+		else {
+			$("#announcements").removeClass('fadeOutLeft');
+		}
 		if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {
 			$("#cta").addClass('animated fadeOutUp');
 		}
