@@ -1,25 +1,27 @@
 $(function(){
-	$("#welcome-line-1").fitText(1, { minFontSize: '17px', maxFontSize: '111px' });
-	$("#welcome-line-2").fitText(2, { minFontSize: '17px', maxFontSize: '57px' });
+	$("#welcome-line-1").fitText(1, { minFontSize: '17px', maxFontSize: '112px' });
+	$("#welcome-line-2").fitText(2, { minFontSize: '17px', maxFontSize: '56px' });
 	$("#description").fitText(3, { minFontSize: '6px', maxFontSize: '24px' });
+	$(".header-h1").fitText(1, {minFontSize: '17px', maxFontSize: '63px'});
+	$(".header-lead").fitText(2, {minFontSize: '6px', maxFontSize: '42px'});
 
 	$(window).load(
 		function(){
 			$('#intro')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/4))+'px'});
+			.css({'padding-top': (($(window).height()/4)+25)+'px'});
 
 			$('#why')
 			.css({'height': (($(window).height())-25)+'px'})
-			.css({'padding-top': (($(window).height()/6)-25)+'px'});
+			.css({'padding-top': (($(window).height()/6)+25)+'px'});
 
 			$('#services')
 			.css({'height': (($(window).height())-25)+'px'})
-			.css({'padding-top': (($(window).height()/8)-25)+'px'});
+			.css({'padding-top': (($(window).height()/8)+25)+'px'});
 
 			$('#go')
 			.css({'height': (($(window).height())-25)+'px'})
-			.css({'padding-top': (($(window).height()/4)-25)+'px'});
+			.css({'padding-top': (($(window).height()/4)+25)+'px'});
 		});
 
 	$(window).resize(

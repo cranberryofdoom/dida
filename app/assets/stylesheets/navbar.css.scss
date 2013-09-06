@@ -2,6 +2,16 @@ $yellow: #F1C40F;
 $charcoal: #333;
 $off-white: #F2ECEA;
 
+.thanks {
+	color: $charcoal;
+	li {
+		a {
+			color: $charcoal;
+			display: inline;
+		}
+	}
+}
+
 .navbar-inverse {
 	background-color: $charcoal;
 	a {

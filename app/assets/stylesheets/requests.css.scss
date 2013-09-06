@@ -1,3 +1,291 @@
-// Place all the styles related to the requests controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$yellow: #F1C40F;
+$off-white: #F2ECEA;
+$charcoal: #333;
+$teal: #69AEBD;
+$green: #D0583A;
+$red: #D0583A;
+
+@media (min-width: 1200px) {
+	#progress-bar {
+		display: none;
+	}
+}
+
+#progress-bar {
+	display: none;
+	text-align: center;
+	position: fixed;
+	left: 0;
+	top: 10%;
+	ul {
+		.teal-1 {
+			background-color: $teal;
+		}
+		.teal-2 {
+			background-color: darken($teal, 10%);
+		}
+		.teal-3 {
+			background-color: darken($teal, 20%);
+		}
+		.red-1 {
+			background-color: $red;
+		}
+		.red-2 {
+			background-color: darken($red, 20%);
+		}
+		.green-1 {
+			background-color: $green;
+		}
+		.green-2 {
+			background-color: darken($green, 10%);
+		}
+		li {
+			width: 125px;
+			height: 125px;
+			border-radius: 50%;
+			color: $off-white;
+			list-style: none;
+			padding: 10px;
+			margin: 20px 10px;
+			display: table;
+			div{
+				vertical-align: middle;
+				display: table-cell;
+				p {
+					font-size: 12px;
+					font-weight: 700;
+				}
+				h4 {
+					font-size: 14px;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}
+
+#choose-project {
+	text-align: center;
+	h1 {
+		margin-bottom: 50px;
+	}
+	.form-subtext {
+		padding: 30px;
+		display: none;
+	}
+	.form-selector {
+		display: block;
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		margin: auto;
+		-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+		-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
+		box-shadow: 1px 1px 4px rgba(0,0,0,0.55);	
+		-webkit-transition-duration: 0.5s;
+		-webkit-transition-property: all;
+		-webkit-transition-timing-function: ease-in-out;
+		&:hover {
+			cursor: pointer;
+			text-decoration: none;
+		}
+		.form-label {
+			font-weight: 700;
+			text-align: center;
+			line-height: 100px;
+			background-color: transparent;
+			color: $off-white;
+		}
+	}
+
+	#form-print-selector {
+		background-color: $teal;
+		border: 1px solid $teal;
+		&:hover {
+			background-color:
+			lighten($teal, 10%);
+		}
+	}
+
+
+	#form-plaza-selector {
+		background-color: $red;
+		border: 1px solid $red;
+		&:hover {
+			background-color:
+			lighten($red, 10%);
+		}
+	}
+
+	#form-web-selector {
+		background-color: $green;
+		border: 1px solid $green;
+		&:hover {
+			background-color:
+			lighten($green, 10%);
+		}
+	}
+
+	.print-active {
+		background-color: lighten($teal, 10%);
+		width: 165px;
+		height: 165px
+	}
+	.plaza-active {
+		background-color: lighten($red, 10%);
+		width: 165px;
+		height: 165px
+	}
+	.web-active {
+		background-color: lighten($green, 10%);
+		width: 165px;
+		height: 165px
+	}
+
+	.back {
+		display: none;
+
+	}
+	.next {
+		display: none;
+	}
+}
+
+#basic-info {
+	display: none;
+	#plaza-fundcode {
+		display: none;
+	}
+}
+
+#project-medium {
+	display: none;
+	.checkbox {
+		margin: 20px 0;
+		label {
+			margin: 50%;
+			font-size: 14px;
+			font-weight: 700;
+		}
+	}
+	.icheckbox_flat-yellow {
+		position: absolute;
+		left: 40%;
+	}
+}
+
+#project-details {
+	display: none;
+	label.col-lg-4 {
+		padding-left: 100px;
+	}
+	#logistics-agreement {
+		padding: 0;
+	}
+	.checkbox {
+		margin: 20px 0;
+		label {
+			font-size: 14px;
+			font-weight: 700;
+		}
+	}
+	.icheckbox_flat-yellow {
+		position: absolute;
+		right: 10%;
+	}
+}
+
+#form-success {
+	text-align: center;
+	.lead {
+		font-size: 30px;
+	}
+	a {
+		color: $charcoal;
+		&:hover {
+			text-decoration: none;
+			color:
+			lighten($charcoal, 20%);
+		}
+	}
+	.restart-arrow {
+		margin-right: 10px;
+	}
+}
+
+.form-header {
+	margin-bottom: 50px;
+	text-align: center;
+}
+
+.back {
+	text-align: left;
+	margin-top: 50px;
+	cursor: pointer;
+	.back-arrow {
+		margin-right: 10px;
+	}
+	h3 {
+		margin: 0;
+		font-weight: 700;
+		&:hover {
+			color:
+			lighten($charcoal, 20%);
+		}
+	}
+}
+
+
+.next {
+	text-align: right;
+	margin: 50px 0;
+	cursor: pointer;
+
+	.next-arrow {
+		margin-left: 10px;	}
+		h3 {
+			margin: 0;
+			font-weight: 700;
+			&:hover {
+				color:
+				lighten($charcoal, 20%);
+			}
+		}
+	}
+
+	.submit {
+		text-align: right;
+		margin: 50px 0;
+		cursor: pointer;
+		.submit-arrow {
+			margin-left: 10px;
+		}
+		h3 {
+			margin: 0;
+			font-weight: 700;
+			&:hover {
+				color:
+				lighten($charcoal, 20%);
+			}
+		}
+	}
+
+	#parsley-agreement-check {
+		padding-right: 60px;
+	}
+
+	.parsley-error-list {
+		float: right;
+		li {
+			list-style: none;
+			font-size: 10px;
+			font-weight: 900;
+		}
+	}
+
+	.form-control {
+		&:focus {
+			border-color: $yellow;
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),  0 0 1px $yellow; 
+		}
+	}

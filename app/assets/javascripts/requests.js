@@ -6,38 +6,38 @@ $(function(){
 				radioClass: 'iradio_flat-yellow'});
 			$('#choose-project')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/4))+'px'});
+			.css({'padding-top': (($(window).height()/4)+ 50)+'px'});
 			$('#basic-info')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/16))+'px'});
+			.css({'padding-top': (($(window).height()/16)+ 50)+'px'});
 			$('#project-medium')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/16))+'px'});
+			.css({'padding-top': (($(window).height()/16)+ 50)+'px'});
 			$('#project-details')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/16))+'px'});
+			.css({'padding-top': (($(window).height()/16)+ 50)+'px'});
 			$('#form-success')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/4))+'px'});
+			.css({'padding-top': (($(window).height()/4)+ 50)+'px'});
 		});
 
 	$(window).resize(
 		function(){
 			$('#choose-project')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/4))+'px'});
+			.css({'padding-top': (($(window).height()/4)+ 50)+'px'});
 			$('#basic-info')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/16))+'px'});
+			.css({'padding-top': (($(window).height()/16)+ 50)+'px'});
 			$('#project-medium')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/16))+'px'});
+			.css({'padding-top': (($(window).height()/16)+ 50)+'px'});
 			$('#project-details')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/16))+'px'});
+			.css({'padding-top': (($(window).height()/16)+ 50)+'px'});
 			$('#form-success')
 			.css({'height': (($(window).height()))+'px'})
-			.css({'padding-top': (($(window).height()/4))+'px'});
+			.css({'padding-top': (($(window).height()/4)+ 50)+'px'});
 		});
 
 	$(window).scroll(
