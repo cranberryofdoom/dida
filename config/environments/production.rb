@@ -77,4 +77,15 @@ Dida::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+    :address        => 'smtp.gmail.com',
+    :domain         => 'localhost',
+    :port           => 587,
+    :user_name      => 'dida.manager@gmail.com',
+    :password       => 'cubists101',
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
 end
