@@ -33,7 +33,7 @@ Dida::Application.configure do
     :domain         => 'localhost',
     :port           => 587,
     :user_name      => 'dida.manager@gmail.com',
-    :password       => 'cubists101',
+    :password       => 'fishtank2008',
     :authentication => :plain,
     :enable_starttls_auto => true
   }
