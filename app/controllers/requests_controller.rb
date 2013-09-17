@@ -18,6 +18,7 @@ class RequestsController < ApplicationController
 				r.fundCode = param[:value]
 			elsif param[:name] == "eMail"
 				r.eMail = param[:value]
+				puts param[:value]
 			end 
 		end
 		if params[:medium] != nil

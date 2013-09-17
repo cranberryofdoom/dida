@@ -216,6 +216,7 @@ $("#form-submit").click(
 		$('#basic-form').parsley('validate');
 		$('#details-form').parsley('validate');
 		if ($('#basic-form').parsley('isValid') && $('#details-form').parsley('isValid')) {
+			$("#form-submit").attr("disabled", true);	
 			var formData = {}
 			formData.kind = window.requestkind;
 			formData.basic = $('#basic-form').serializeArray()

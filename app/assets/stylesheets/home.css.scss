@@ -38,7 +38,7 @@ $red: #D0583A;
 }
 
 @media (min-width: 768px) {
-	
+
 }
 
 #services {
@@ -133,9 +133,6 @@ $red: #D0583A;
 	margin: auto;
 	border: 1px solid $yellow;
 	background-color: $yellow;
-	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
-	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.55);
-	box-shadow: 1px 1px 4px rgba(0,0,0,0.55);	
 	&:hover {
 		background-color:
 		lighten($yellow, 10%);
