@@ -1,5 +1,7 @@
 Dida::Application.routes.draw do
 
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   root :to => 'static#index'
   get '/index' => 'static#index'
   get '/request' => 'requests#new'
