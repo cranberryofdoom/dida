@@ -1,10 +1,8 @@
-$off-white: #F2ECEA;
-$charcoal: #333;
-
 html, body {
 	font-family: 'Lato', sans-serif;
 	background: url("geometry.png");
 	background-color: $off-white;
+	color: $charcoal;
 }
 
 h1, h2, h3, h4 {
@@ -32,6 +30,7 @@ p, li, b, strong {
 p.lead {
 	font-size: 3em;
 	font-weight: 300;
+	margin-bottom: 40px;
 }
 
 

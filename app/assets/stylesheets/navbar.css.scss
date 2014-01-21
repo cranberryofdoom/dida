@@ -1,12 +1,13 @@
-$yellow: #F1C40F;
-$charcoal: #333;
-$off-white: #F2ECEA;
-
 .thanks {
 	color: $charcoal;
 	li {
+		padding: 5px 5px;
+		font-size: 10px;
+		border-bottom: 1px solid $charcoal;
+		color: $charcoal !important;
 		a {
-			color: $charcoal;
+			padding: 0;
+			color: $charcoal !important;
 			display: inline;
 		}
 	}
