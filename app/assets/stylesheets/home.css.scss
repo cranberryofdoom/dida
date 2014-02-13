@@ -175,7 +175,7 @@
 	left: 30px;
 }
 
-#sad {
+#yay {
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -185,6 +185,14 @@
 	b {
 		text-transform: uppercase;
 		font-weight: 900;
+		a {
+			color: $charcoal;
+			&:hover {
+				color:
+			lighten($charcoal, 20%);
+			text-decoration: none;
+			}
+		}
 	}
 	p {
 		font-size: 14px;
@@ -193,13 +201,13 @@
 	position: absolute;
 	height: 180px;
 	width: 180px;
-	bottom: 65px;
+	bottom: 80px;
 	left: -5px;
 	padding: 15px;
 }
 
 #speech-bubble {
 	position: absolute;
-	bottom: 100px;
+	bottom: 110px;
 	left: -5px;
 }
