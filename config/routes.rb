@@ -1,14 +1,6 @@
 Dida::Application.routes.draw do
   root :to => 'static#index'
   get '/index' => 'static#index'
-  get '/request' => 'requests#new'
-  post '/request/submit' => 'requests#create'
-  get '/success' => 'requests#success'
-  get '/about' => 'static#about'
-  get '/team' => 'static#team'
-  get '/portfolio' => 'static#portfolio'
-  get '/join' => 'static#join'
-  get '/policies' => 'static#policies'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

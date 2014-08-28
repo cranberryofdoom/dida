@@ -1,7 +1,5 @@
 html, body {
 	font-family: 'Lato', sans-serif;
-	background: url("geometry.png");
-	background-color: $off-white;
 	color: $charcoal;
 }
 
@@ -33,20 +31,8 @@ p.lead {
 	margin-bottom: 40px;
 }
 
-
-.static-header {
-}
-
-.static-content {
-	padding: 0 50px;
-}
-
-.row {
-	margin-left: 0;
-	margin-right: 0;
-}
-
-.header-line {
+.window {
+	margin: 15% 0;
 }
 
 hr {
